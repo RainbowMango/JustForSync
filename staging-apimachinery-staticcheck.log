@@ -1,0 +1,31 @@
+installing staticcheck from vendor
+Errors from staticcheck:
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/conversion/webhook_converter.go:116:28: func (*webhookConverter).hasConversionReviewVersion is unused (U1000)
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/customresource_handler_test.go:98:10: this value of err is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/schema/goopenapi_test.go:34:5: var nullTypeRE is unused (U1000)
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/schema/objectmeta/validation_test.go:228:6: func invalidIndex is unused (U1000)
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/schema/objectmeta/validation_test.go:231:6: func unsupported is unused (U1000)
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/schema/objectmeta/validation_test.go:234:6: func immutable is unused (U1000)
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/schema/objectmeta/validation_test.go:237:6: func forbidden is unused (U1000)
+vendor/k8s.io/apiextensions-apiserver/pkg/apiserver/schema/pruning/algorithm_test.go:639:21: this result of append is never used, except maybe in other appends (SA4010)
+vendor/k8s.io/apiextensions-apiserver/pkg/controller/finalizer/crd_finalizer.go:133:4: this value of crd is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/pkg/registry/customresource/etcd.go:345:18: this value of found is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/basic_test.go:527:2: this value of noxuDefinition is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/basic_test.go:830:24: this value of err is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/basic_test.go:836:24: this value of err is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/change_test.go:67:2: the goroutine calls T.Fatal, which must be called in the same goroutine as the test (SA2002)
+vendor/k8s.io/apiextensions-apiserver/test/integration/change_test.go:99:3: the goroutine calls T.Fatal, which must be called in the same goroutine as the test (SA2002)
+vendor/k8s.io/apiextensions-apiserver/test/integration/change_test.go:119:3: the goroutine calls T.Fatalf, which must be called in the same goroutine as the test (SA2002)
+vendor/k8s.io/apiextensions-apiserver/test/integration/conversion/conversion_test.go:274:4: this value of obj is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/conversion/conversion_test.go:945:2: field options is unused (U1000)
+vendor/k8s.io/apiextensions-apiserver/test/integration/fixtures/server.go:36:18: this value of err is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/subresources_test.go:539:4: this value of createdNoxuInstance is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/validation_test.go:585:2: this value of crd is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/validation_test.go:616:3: this value of crd is never used (SA4006)
+vendor/k8s.io/apiextensions-apiserver/test/integration/validation_test.go:650:3: this value of crd is never used (SA4006)
+
+Please review the above warnings. You can test via:
+  hack/verify-staticcheck.sh <failing package>
+If the above warnings do not make sense, you can exempt the line or file. See:
+  https://staticcheck.io/docs/#ignoring-problems
+

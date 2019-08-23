@@ -1,0 +1,38 @@
+installing staticcheck from vendor
+Errors from staticcheck:
+vendor/k8s.io/client-go/discovery/cached/memory/memcache_test.go:94:2: this value of g is never used (SA4006)
+vendor/k8s.io/client-go/dynamic/fake/simple.go:103:14: this value of err is never used (SA4006)
+vendor/k8s.io/client-go/dynamic/fake/simple.go:116:14: this value of err is never used (SA4006)
+vendor/k8s.io/client-go/metadata/fake/simple.go:121:14: this value of err is never used (SA4006)
+vendor/k8s.io/client-go/metadata/fake/simple.go:134:14: this value of err is never used (SA4006)
+vendor/k8s.io/client-go/rest/request_test.go:1157:6: type fakeUpgradeConnection is unused (U1000)
+vendor/k8s.io/client-go/rest/request_test.go:1171:6: type fakeUpgradeRoundTripper is unused (U1000)
+vendor/k8s.io/client-go/rest/watch/decoder_test.go:54:3: the goroutine calls T.Fatalf, which must be called in the same goroutine as the test (SA2002)
+vendor/k8s.io/client-go/rest/watch/decoder_test.go:70:3: the goroutine calls T.Fatalf, which must be called in the same goroutine as the test (SA2002)
+vendor/k8s.io/client-go/restmapper/category_expansion.go:61:25: e.discoveryClient.ServerResources is deprecated: use ServerGroupsAndResources instead.  (SA1019)
+vendor/k8s.io/client-go/restmapper/shortcut.go:87:21: e.discoveryClient.ServerResources is deprecated: use ServerGroupsAndResources instead.  (SA1019)
+vendor/k8s.io/client-go/testing/actions.go:442:9: should use strings.EqualFold(a, b) instead of strings.ToLower(a) == strings.ToLower(b) (SA6005)
+vendor/k8s.io/client-go/testing/actions.go:443:3: should use strings.EqualFold(a, b) instead of strings.ToLower(a) == strings.ToLower(b) (SA6005)
+vendor/k8s.io/client-go/testing/fixture_test.go:199:3: the goroutine calls T.Fatalf, which must be called in the same goroutine as the test (SA2002)
+vendor/k8s.io/client-go/tools/cache/delta_fifo.go:542:21: func (*DeltaFIFO).syncKey is unused (U1000)
+vendor/k8s.io/client-go/tools/cache/reflector.go:49:2: field metrics is unused (U1000)
+vendor/k8s.io/client-go/tools/cache/reflector.go:133:2: var errorResyncRequested is unused (U1000)
+vendor/k8s.io/client-go/tools/cache/reflector_metrics.go:50:6: type reflectorMetrics is unused (U1000)
+vendor/k8s.io/client-go/tools/clientcmd/client_config_test.go:461:8: const expectedErrorContains is unused (U1000)
+vendor/k8s.io/client-go/tools/clientcmd/merged_client_builder_test.go:27:6: type testLoader is unused (U1000)
+vendor/k8s.io/client-go/tools/clientcmd/validation.go:188:3: should check returned error before deferring clientCertCA.Close() (SA5001)
+vendor/k8s.io/client-go/tools/clientcmd/validation.go:226:4: should check returned error before deferring clientCertFile.Close() (SA5001)
+vendor/k8s.io/client-go/tools/clientcmd/validation.go:233:4: should check returned error before deferring clientKeyFile.Close() (SA5001)
+vendor/k8s.io/client-go/tools/leaderelection/leaderelection.go:192:2: field name is unused (U1000)
+vendor/k8s.io/client-go/tools/portforward/portforward_test.go:378:9: this value of err is never used (SA4006)
+vendor/k8s.io/client-go/tools/watch/until_test.go:38:2: field name is unused (U1000)
+vendor/k8s.io/client-go/transport/token_source_test.go:145:4: the goroutine calls T.Fatalf, which must be called in the same goroutine as the test (SA2002)
+vendor/k8s.io/client-go/util/jsonpath/parser.go:40:2: field cur is unused (U1000)
+vendor/k8s.io/client-go/util/jsonpath/parser.go:186:34: argument cur is overwritten before first use (SA4009)
+vendor/k8s.io/client-go/util/jsonpath/parser.go:234:3: this value of r is never used (SA4006)
+
+Please review the above warnings. You can test via:
+  hack/verify-staticcheck.sh <failing package>
+If the above warnings do not make sense, you can exempt the line or file. See:
+  https://staticcheck.io/docs/#ignoring-problems
+
