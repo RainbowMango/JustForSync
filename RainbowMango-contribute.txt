@@ -1,0 +1,61 @@
+**Repository: kubernetes**
+
+Total Pull Requests Created: 17
+1. [kubernetes/kubernetes#82064](https://github.com/kubernetes/kubernetes/pull/82064) - Cleanup cluster/images/conformance/go-runner test data after test done
+2. [kubernetes/kubernetes#81989](https://github.com/kubernetes/kubernetes/pull/81989) - Cleanup staticcheck issues for apiextension
+3. [kubernetes/kubernetes#81947](https://github.com/kubernetes/kubernetes/pull/81947) - Cleanup client-go static analysis issues-phase 1
+4. [kubernetes/kubernetes#81931](https://github.com/kubernetes/kubernetes/pull/81931) - Cleanup vsphere staticcheck issue
+5. [kubernetes/kubernetes#81919](https://github.com/kubernetes/kubernetes/pull/81919) - Cleanup aws staticcheck issue(U1000).
+6. [kubernetes/kubernetes#81771](https://github.com/kubernetes/kubernetes/pull/81771) - Cleanup gce static analysis issues
+7. [kubernetes/kubernetes#81708](https://github.com/kubernetes/kubernetes/pull/81708) - Fix static failure for package: staging/src/k8s.io/code-generator
+8. [kubernetes/kubernetes#81703](https://github.com/kubernetes/kubernetes/pull/81703) - Fix static failure from package: staging/src/k8s.io/kube-aggregator
+9. [kubernetes/kubernetes#81509](https://github.com/kubernetes/kubernetes/pull/81509) - Add authentication metrics: failure, error count
+10. [kubernetes/kubernetes#81352](https://github.com/kubernetes/kubernetes/pull/81352) - Fix golint error for staging/src/k8s.io/client-go/discovery/fake
+11. [kubernetes/kubernetes#80350](https://github.com/kubernetes/kubernetes/pull/80350) - Update misleading comemnts for HandleCrash
+12. [kubernetes/kubernetes#80024](https://github.com/kubernetes/kubernetes/pull/80024) - kubeadm should always fall back to client version when there is any internet issue
+13. [kubernetes/kubernetes#79963](https://github.com/kubernetes/kubernetes/pull/79963) - Fix go lint error for cache directory
+14. [kubernetes/kubernetes#79404](https://github.com/kubernetes/kubernetes/pull/79404) - Update link in pull request template
+15. [kubernetes/kubernetes#79372](https://github.com/kubernetes/kubernetes/pull/79372) - Fix service load balancer may not be cleaned up on corner case of type change
+16. [kubernetes/kubernetes#79258](https://github.com/kubernetes/kubernetes/pull/79258) - Remove redundant initilization for service controller
+17. [kubernetes/kubernetes#79130](https://github.com/kubernetes/kubernetes/pull/79130) - Minor change: delete unused constant from service controller
+
+Total Issues Opened: 2
+1. [kubernetes/kubernetes#81598](https://github.com/kubernetes/kubernetes/issues/81598) - Add comments when rely on a particular bash version
+2. [kubernetes/kubernetes#80581](https://github.com/kubernetes/kubernetes/issues/80581) - The vulnerability(CVE-2019-11244) is not completely eliminated
+
+Total Pull Requests Reviewed: 5
+1. [kubernetes/kubernetes#81757](https://github.com/kubernetes/kubernetes/pull/81757) - cleanup code
+2. [kubernetes/kubernetes#81718](https://github.com/kubernetes/kubernetes/pull/81718) - fix cluster/images/conformance/go-runner/tar_test.go
+3. [kubernetes/kubernetes#81688](https://github.com/kubernetes/kubernetes/pull/81688) - Fixed static check failures for pkg/volume/, pkg/kubelet, pkg/util and cmd/kubelet
+4. [kubernetes/kubernetes#80813](https://github.com/kubernetes/kubernetes/pull/80813) - Honor umask settings when writing cache files
+5. [kubernetes/kubernetes#78742](https://github.com/kubernetes/kubernetes/pull/78742) - The garbage collector and quota counter should use the metadata client and protobuf to access resources
+
+
+**Repository: website**
+
+Total Pull Requests Created: 2
+1. [kubernetes/website#15084](https://github.com/kubernetes/website/pull/15084) - Fix CoreDNS version restriction for service ExternalName type.
+2. [kubernetes/website#14801](https://github.com/kubernetes/website/pull/14801) - Minor change: fix typo for Chinese localization.
+
+
+**Repository: test-infra**
+
+Total Pull Requests Created: 3
+1. [kubernetes/test-infra#13758](https://github.com/kubernetes/test-infra/pull/13758) - Minor change: update error message for not run from kubernetes root
+2. [kubernetes/test-infra#13381](https://github.com/kubernetes/test-infra/pull/13381) - Add projects to Prow user list
+3. [kubernetes/test-infra#13292](https://github.com/kubernetes/test-infra/pull/13292) - Update command help for assign plugin
+
+
+**Repository: community**
+
+Total Pull Requests Created: 2
+1. [kubernetes/community#3931](https://github.com/kubernetes/community/pull/3931) - Add timezone convert link for 'Meet Our Contributors'
+2. [kubernetes/community#3872](https://github.com/kubernetes/community/pull/3872) - Update contributor guide about assign feature
+
+
+**Repository: kubeadm**
+
+Total Pull Requests Created: 1
+1. [kubernetes/kubeadm#1604](https://github.com/kubernetes/kubeadm/pull/1604) - Minor change: Fix broken link for design docs
+
+
